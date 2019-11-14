@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/46a46e826b.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            font-family: Helvetica, Arial, sans-serif;
+
+        }
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url("big_noodle_titling.ttf");
+        }
+
+        .headSection {
+            background-size: auto;
+            font-size: 8rem;
+            color: white;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #141414;
+            font-family: myFirstFont;
+            padding-bottom: 3vh;
+            /*text-shadow: 3px 3px 3px black;*/
+
+        }
+
+        @media only screen and (max-width: 500px) {
+            .headSection {
+            }
+        }
+
+        h2 {
+            font-size: 42px;
+            color: whitesmoke;
+            text-align: center;
+            font-family: myFirstFont;
+            padding-top: 10px;
+
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background: whitesmoke;
+
+        }
+
+        a {
+            color: whitesmoke;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            text-align: center;
+            line-height: 80px;
+            font-weight: normal;
+
+        }
+
+        .masonry { /* Masonry container */
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+            -webkit-column-gap: 1em;
+            -moz-column-gap: 1em;
+            column-gap: 1em;
+            margin: 0 auto;
+            max-width: 1400px;
+            padding: 0;
+            -moz-column-gap: 1.5em;
+            -webkit-column-gap: 1.5em;
+            column-gap: 1.5em;
+            font-size: .85em;
+
+        }
+
+        .contain {
+            color: #F8F9FA;
+            padding: 30px;
+            background: #1C1C1C;
+
+            padding-top: 0;
+
+        }
+
+        .item {
+            display: inline-block;
+            background: #282828;
+            color: whitesmoke;
+            margin: 0 0 1.5em;
+            width: 100%;
+            -webkit-transition: 1s ease all;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .item .textSection {
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .item img {
+            max-width: 100%;
+        }
+
+        @media only screen and (max-width: 320px) {
+            .masonry {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+        }
+        @media only screen and (max-width: 700px) {
+            .item {
+                margin: 0 0 0.5em;
+            }
+            .masonry {
+                -moz-column-gap: 0.5em;
+                -webkit-column-gap: 0.5em;
+                column-gap: 0.5em;
+            }
+            .contain{
+                padding: 0.5em;
+            }
+        }
+        @media only screen and (min-width: 321px) and (max-width: 768px) {
+            .masonry {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 1200px) {
+            .masonry {
+                -moz-column-count: 3;
+                -webkit-column-count: 3;
+                column-count: 3;
+            }
+        }
+
+        @media only screen and (min-width: 1201px) {
+            .masonry {
+                -moz-column-count: 4;
+                -webkit-column-count: 4;
+                column-count: 4;
+            }
+        }
+
+        .links {
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif !important;
+            color: whitesmoke;
+        }
+
+        /* Grow */
+        .hvr-grow {
+            display: inline-block;
+            vertical-align: middle;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            transition-duration: 0.3s;
+            transition-property: transform;
+        }
+
+        .hvr-grow:hover,
+        .hvr-grow:focus,
+        .hvr-grow:active {
+            transform: scale(1.05);
+
+        }
+
+        .logoIMG {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .buttonSocial {
+            padding: 10px;
+            background-color: #007bb5;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="headSection">
+    <img src="logo.png" class="logoIMG" width="650px">
+
+    <div class="links">
+        <a href="mailto:zahraafakira@gmail.com" target="_blank" class="fas fa-envelope-square buttonSocial" style="background-color: #dd4b39"></a>
+        <a href="http://www.linkedin.com/in/kenza-fakira" target="_blank" class="fab fa-linkedin buttonSocial"></a>
+        <a href="https://www.artstation.com/kenzart" target="_blank" class="fab fa-artstation buttonSocial" style="background-color: #13AFF0"></a>
+        <br><br>
+        <a href="Kenza_Fakira_CV.pdf" target="_blank" style="font-decoration: underline"><i class="fas fa-file-alt"></i> Download CV</a>
+    </div>
+</div>
+<div class="contain"><br>
+    <h2>Portfolio</h2>
+    <p><i class="fas fa-hand-pointer"></i> Click on an item to view full resolution</p>
+    <br>
+    <div class="masonry">
+        <a href="Full/Paintings/kenza-fakira-hand.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/kenza-fakira-hand.jpg">
+                <div class="textSection">
+                    <h1>Hand</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/kenza-fakira-rainy-litchi.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/kenza-fakira-rainy-litchi.jpg">
+                <div class="textSection">
+                    <h1>Rainy Litchi</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/12543194_1015013898540835_516436065_n.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/12543194_1015013898540835_516436065_n.jpg">
+                <div class="textSection">
+                    <h1>Benedict Cumberbatch</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/Jacob%20Lee%20traditional%20portrait.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Jacob%20Lee%20traditional%20portrait.jpg">
+                <div class="textSection">
+                    <h1>Jacob Lee portait</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/environmental%20study.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/environmental%20study.jpg">
+                <div class="textSection">
+                    <h1>Environmental Study</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/Photo%20from%20Kenza%20Fakira.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Photo%20from%20Kenza%20Fakira.jpg">
+                <div class="textSection">
+                    <h1>Portrait</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/Tony%20Thornburg.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Tony%20Thornburg.jpg">
+                <div class="textSection">
+                    <h1>Tony Thornburg</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/Martin%20Freeman.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Martin%20Freeman.jpg">
+                <div class="textSection">
+                    <h1>Martin Freeman</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Paintings/Abandoned%20Russian%20Base%20Study.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Abandoned%20Russian%20Base%20Study.jpg">
+                <div class="textSection">
+                    <h1>Abandoned Russian Base</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="Full/Paintings/Life%20drawing%20study%20candle.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Paintings/Life%20drawing%20study%20candle.jpg">
+                <div class="textSection">
+                    <h1>Life Drawing Study - Candle</h1>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-back-cover-final.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-back-cover-final.jpg">
+                <div class="textSection">
+                    <h1>Back Cover - Final</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-background.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-background.jpg">
+                <div class="textSection">
+                    <h1>Background</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-gold-skull-logo.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-gold-skull-logo.jpg">
+                <div class="textSection">
+                    <h1>Gold Skull Logo</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-inner-pieces-lit-final-smaller.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-inner-pieces-lit-final-smaller.jpg">
+                <div class="textSection">
+                    <h1>Inner Pieces</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-merged-with-logo.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-merged-with-logo.jpg">
+                <div class="textSection">
+                    <h1>Logo</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-philosophy-album-cover-smaller.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-philosophy-album-cover-smaller.jpg">
+                <div class="textSection">
+                    <h1>'Philosophy' Album Cover [Small]</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Freelance%20illustration/kenza-fakira-writer-skull-final-logo.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Freelance%20illustration/kenza-fakira-writer-skull-final-logo.jpg">
+                <div class="textSection">
+                    <h1>Writer Skull Logo</h1>
+                    <p>Freelance Illustration</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Matte%20paintings/Kenza_Night%20Matte.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Matte%20paintings/Kenza_Night%20Matte.jpg">
+                <div class="textSection">
+                    <h1>Nighttime</h1>
+                    <p>Matte Paintings</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Matte%20paintings/Kenza_Sunset_Matte_Final.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Matte%20paintings/Kenza_Sunset_Matte_Final.jpg">
+                <div class="textSection">
+                    <h1>Sunset</h1>
+                    <p>Matte Paintings</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Matte%20paintings/Matte%203.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Matte%20paintings/Matte%203.jpg">
+                <div class="textSection">
+                    <h1>Matte '3'</h1>
+                    <p>Matte Paintings</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Matte%20paintings/Sunrise%20matte%20edit.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Matte%20paintings/Sunrise%20matte%20edit.jpg">
+                <div class="textSection">
+                    <h1>Sunrise</h1>
+                    <p>Matte Paintings</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Matte%20paintings/Sunset%20matte%20edit_v2.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Matte%20paintings/Sunset%20matte%20edit_v2.jpg">
+                <div class="textSection">
+                    <h1>Sunrise 2</h1>
+                    <p>Matte Paintings</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Fine%20art%20render%202nd%20year/kenza-fakira-fakira-kenza-final-comp-jpeg.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Fine%20art%20render%202nd%20year/kenza-fakira-fakira-kenza-final-comp-jpeg.jpg">
+                <div class="textSection">
+                    <h1>Final Render</h1>
+                    <p>Fine Art Render</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/Fine%20art%20render%202nd%20year/kenza-fakira-final-piece-of-concept-with-buoy.jpg"
+           target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/Fine%20art%20render%202nd%20year/kenza-fakira-final-piece-of-concept-with-buoy.jpg">
+                <div class="textSection">
+                    <h1>Piece Of Concept</h1>
+                    <p>Fine Art Render</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/concepts%20DASSIE/47694043_949350745262059_4109478525220361544_n.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/concepts%20DASSIE/47694043_949350745262059_4109478525220361544_n.jpg">
+                <div class="textSection">
+                    <h1>Landscape</h1>
+                    <p>'Dassie' concepts</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/concepts%20DASSIE/Clay%20bed%201.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/concepts%20DASSIE/Clay%20bed%201.jpg">
+                <div class="textSection">
+                    <h1>Clay Bed</h1>
+                    <p>'Dassie' concepts</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/concepts%20DASSIE/Environment%20concept%20Baobab%20tree.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/concepts%20DASSIE/Environment%20concept%20Baobab%20tree.jpg">
+                <div class="textSection">
+                    <h1>Baobab Tree - Environment</h1>
+                    <p>'Dassie' concepts</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/concepts%20DASSIE/Environment%20concept.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/concepts%20DASSIE/Environment%20concept.jpg">
+                <div class="textSection">
+                    <h1>Environment Concept</h1>
+                    <p>'Dassie' concepts</p>
+                </div>
+            </div>
+        </a>
+        <a href="Full/concepts%20DASSIE/Rocky%20Background.jpg" target="_blank">
+            <div class="item hvr-grow">
+                <img src="Thumbs/concepts%20DASSIE/Rocky%20Background.jpg">
+                <div class="textSection">
+                    <h1>Rocky Background</h1>
+                    <p>'Dassie' concepts</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
